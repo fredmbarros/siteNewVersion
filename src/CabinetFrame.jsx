@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import ChangeLanguage from "./ChangeLanguage";
 import ChangeMode from "./ChangeMode";
 
-const Cabinet = () => {
+const CabinetFrame = () => {
   const [mode, setMode] = useState("dark");
   const [language, setLanguage] = useState("English");
 
@@ -14,13 +14,13 @@ const Cabinet = () => {
 
   return (
     <div>
-      <div className="header-container">
+      <div className="cabinet-upper-frame">
         <ChangeLanguage language={language} setLanguage={setLanguage} />
-        <h1>Frederico Barros</h1>
+        <h1>frederico barros</h1>
         <ChangeMode mode={mode} setMode={setMode} />
       </div>
     </div>
   );
 };
 
-export default Cabinet;
+export default CabinetFrame;

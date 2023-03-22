@@ -1,13 +1,24 @@
 import { createRoot } from "react-dom/client";
 
-import Cabinet from "./Cabinet";
-import MainControls from "./MainControls";
+import CabinetFrame from "./CabinetFrame";
+import PageSelector from "./PageSelector";
+import RadioDisplay from "./RadioDisplay";
+import SubSelector from "./resources/SubSelector";
+import VuMeter from "./VuMeter";
 
 const App = () => {
   return (
     <div>
-      <Cabinet />
-      <MainControls />
+      <div className="receiver">
+        <CabinetFrame />
+        <div className="cabinet-main">
+          <PageSelector />
+          <RadioDisplay />
+          <VuMeter />
+          <VuMeter />
+          <SubSelector />
+        </div>
+      </div>
     </div>
   );
 };

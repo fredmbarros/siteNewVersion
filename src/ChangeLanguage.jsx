@@ -16,6 +16,7 @@ const ChangeLanguage = ({ language, setLanguage }) => {
         onClick={() => setShowLanguageMenu(true)}
         type="button"
         name="change-language"
+        className="cab-upper-frame-script"
       >
         Change language
       </button>

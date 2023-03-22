@@ -9,6 +9,7 @@ const ChangeMode = ({ mode, setMode }) => {
         type="button"
         name="choose-mode"
         value={altMode}
+        className="cab-upper-frame-script"
       >
         Switch to {altMode} mode
       </button>
