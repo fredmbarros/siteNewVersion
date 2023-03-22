@@ -59,10 +59,8 @@ button {
   justify-items: baseline;
 }
 
-.page-select-btn {
+.selector-btn {
   border: solid #aaa 1px;
-  height: 1em;
-  width: 1em;
   border-radius: 50%;
   background-color: black;
   margin-right: 0.5em;
@@ -70,6 +68,21 @@ button {
 
 .selected {
   background-color: #aaa;
+}
+
+.selector-btn-large {
+  height: 2em;
+  width: 2em;
+}
+
+.selector-btn-medium {
+  height: 1em;
+  width: 1em;
+}
+
+.selector-btn-small {
+  height: 0.5em;
+  width: 0.5em;
 }
 
 .radio-display {

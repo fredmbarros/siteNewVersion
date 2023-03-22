@@ -1,13 +1,7 @@
-import { useState } from "react";
+import SelectorButton from "./SelectorButton";
 
-const PageSelector = () => {
-  const [selectedPage, setSelectedPage] = useState(0);
-
-  const handleClick = (index) => {
-    setSelectedPage(index);
-  };
-
-  const pages = ["home", "teaching", "research", "art and music"];
+const PageSelector = ({ selectedPage, setSelectedPage }) => {
+  const pages = ["home", "teaching", "research", "art"];
 
   return (
     <div className="page-selector-container">
@@ -15,15 +9,15 @@ const PageSelector = () => {
         <button
           className="pageLink"
           key={index}
-          onClick={() => handleClick(index)}
+          onClick={() => setSelectedPage(index)}
           type="button"
           name="Page Selector"
         >
-          <span
-            className={`page-select-btn ${
-              index === selectedPage && "selected"
-            }`}
-          ></span>
+          <SelectorButton
+            index={index}
+            selected={selectedPage}
+            diameter="medium"
+          />
           {page.toUpperCase()}
         </button>
       ))}
