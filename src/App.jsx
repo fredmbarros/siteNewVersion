@@ -23,7 +23,7 @@ const App = () => {
     <div>
       <div className="receiver">
         <CabinetFrame />
-        <div className="cabinet-main">
+        <div className="receiver-main">
           <PageSelector
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}

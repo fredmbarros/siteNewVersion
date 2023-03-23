@@ -44,13 +44,18 @@ button {
 .cab-upper-frame-script {
   font-family: "Tangerine";
   font-size: 24px;
+  /* font-family: "Crushed"; */
+  /* font-size: 18px; */
   margin: 0.1em;
 }
-.cabinet-main {
+
+.receiver-main {
   display: flex;
-  margin: 2em;
   align-items: center;
   justify-content: space-around;
+  margin: 0.75em 2em 1.5em 2em;
+  padding: 1em 0 1.5em 0;
+  border: solid 1px #aaa;
 }
 
 .receiver-displays {
@@ -113,7 +118,6 @@ button {
 
 .sub-page-selector-container {
   display: flex;
-  /* width: 50em; */
   justify-content: space-around;
 }
 
