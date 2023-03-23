@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Tangerine&family=Raleway&Gajraj+One");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Tangerine&family=Raleway&family=Gajraj+One&family=Crushed");
 
 * {
   box-sizing: border-box;
@@ -12,7 +12,9 @@ body {
 }
 
 h1 {
-  font-family: "Abril Fatface";
+  font-family: "Gajraj One";
+  /* font-family: "Crushed"; */
+  /* font-family: "Abril Fatface"; */
   font-size: 1.6em;
   margin: 0;
 }
@@ -47,23 +49,33 @@ button {
 .cabinet-main {
   display: flex;
   margin: 2em;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.receiver-displays {
+  display: flex;
+  margin-right: 0.2em;
 }
 
 .page-selector-container {
   display: block;
-  /* margin: 0 0 0 2em; */
 }
 
-.pageLink {
+.page-link {
   display: flex;
   justify-items: baseline;
+  /* font-family: "Abril Fatface"; */
+  /* font-family: "Gajraj One"; */
+  font-family: "Crushed";
+  font-size: 1em;
 }
 
 .selector-btn {
   border: solid #aaa 1px;
   border-radius: 50%;
   background-color: black;
-  margin-right: 0.5em;
+  margin: 0 0.5em 0 0;
 }
 
 .selected {
@@ -97,4 +109,22 @@ button {
   margin: 0 0.5em;
   height: 4em;
   width: 8em;
+}
+
+.sub-page-selector-container {
+  display: flex;
+  /* width: 50em; */
+  justify-content: space-around;
+}
+
+.sub-page-select {
+  align-items: center;
+  display: flex;
+}
+
+.sub-page-title {
+  font-size: 1.5em;
+  /* font-family: "Abril Fatface"; */
+  font-family: "Gajraj One";
+  /* font-family: "Crushed"; */
 }

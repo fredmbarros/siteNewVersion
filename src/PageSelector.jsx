@@ -7,7 +7,7 @@ const PageSelector = ({ selectedPage, setSelectedPage }) => {
     <div className="page-selector-container">
       {pages.map((page, index) => (
         <button
-          className="pageLink"
+          className="page-link"
           key={index}
           onClick={() => setSelectedPage(index)}
           type="button"
@@ -18,7 +18,8 @@ const PageSelector = ({ selectedPage, setSelectedPage }) => {
             selected={selectedPage}
             diameter="medium"
           />
-          {page.toUpperCase()}
+          {/* {page.toUpperCase()} */}
+          {page}
         </button>
       ))}
     </div>

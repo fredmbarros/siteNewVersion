@@ -4,13 +4,13 @@ import SelectorButton from "./SelectorButton";
 
 const SubSelector = ({ arr }) => {
   const [selectedSubPage, setSelectedSubPage] = useState(0);
-
+  console.log(selectedSubPage);
   if (arr) {
     return (
-      <div>
+      <div className="sub-page-selector-container">
         {arr.map((subPage, index) => (
           <button
-            className="subPageSelect"
+            className="sub-page-select"
             key={index}
             onClick={() => setSelectedSubPage(index)}
             type="button"
@@ -21,7 +21,7 @@ const SubSelector = ({ arr }) => {
               selected={selectedSubPage}
               diameter="large"
             />
-            <span>{subPage}</span>
+            <span className="sub-page-title">{subPage}</span>
           </button>
         ))}
       </div>

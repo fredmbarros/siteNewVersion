@@ -1,10 +1,10 @@
 const SelectorButton = ({ index, selected, diameter }) => {
   return (
-    <span
+    <div
       className={`selector-btn ${
         index === selected && "selected"
       } selector-btn-${diameter}`}
-    ></span>
+    ></div>
   );
 };
 export default SelectorButton;
