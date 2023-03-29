@@ -1,10 +1,6 @@
-import { useState } from "react";
-
 import SelectorButton from "./SelectorButton";
 
-const SubSelector = ({ arr }) => {
-  const [selectedSubPage, setSelectedSubPage] = useState(0);
-  console.log(selectedSubPage);
+const SubSelector = ({ arr, selectedSubPage, setSelectedSubPage }) => {
   if (arr) {
     return (
       <div className="sub-page-selector-container">

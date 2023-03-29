@@ -11,6 +11,10 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+p {
+  margin: 0.5em;
+}
+
 h1 {
   font-family: "Gajraj One";
   /* font-family: "Crushed"; */
@@ -28,6 +32,7 @@ button {
   width: 60em;
   height: 16em;
   border: solid #aaa 1px;
+  /* box-shadow: 0em 0.2em 1em rgb(255, 255, 255); */
 }
 
 .languageBox {
@@ -77,14 +82,16 @@ button {
 }
 
 .selector-btn {
-  border: solid #aaa 1px;
+  border: solid #000000 1px;
+  background-color: #aaa;
   border-radius: 50%;
-  background-color: black;
   margin: 0 0.5em 0 0;
+  box-shadow: inset -0.15em -0.2em 0.5em rgb(0, 0, 0);
 }
 
 .selected {
-  background-color: #aaa;
+  background-color: #4f4f4f;
+  box-shadow: inset 0em 0em 0.6em rgb(0, 0, 0);
 }
 
 .selector-btn-large {
@@ -131,4 +138,36 @@ button {
   /* font-family: "Abril Fatface"; */
   font-family: "Gajraj One";
   /* font-family: "Crushed"; */
+}
+
+.speaker {
+  margin-top: 0.5em;
+  border: solid rgb(90, 43, 17) 1em;
+  border-radius: 1% 1% 0 0;
+  width: 60em;
+  height: 100vh;
+}
+
+.grille {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.2em;
+  border-radius: 1%;
+  background-color: #494949;
+  height: 100vh;
+  width: auto;
+  box-shadow: inset 0em 0em 0.5em rgb(0, 0, 0);
+}
+
+.page-contents-wrapper {
+  position: relative;
+  background-color: #000000;
+  top: 4.5em;
+  box-shadow: 0em 0em 1.5em 1.5em rgb(0, 0, 0);
+  border: solid black 1px;
+  border-radius: 1%;
+}
+
+.page-contents {
+  width: 45em;
 }

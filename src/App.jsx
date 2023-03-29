@@ -7,10 +7,13 @@ import RadioDisplay from "./RadioDisplay";
 import SubSelector from "./SubSelector";
 import VuMeter from "./VuMeter";
 import subPageList from "./resources/subPageList";
+import Speaker from "./Speaker";
 
 const App = () => {
   const [selectedPage, setSelectedPage] = useState(0);
   const [subPages, setSubPages] = useState([]);
+  const [selectedSubPage, setSelectedSubPage] = useState(0);
+
   // console.log(selectedPage);
 
   useEffect(() => {
@@ -34,8 +37,13 @@ const App = () => {
             <VuMeter />
           </div>
         </div>
-        <SubSelector arr={subPages} />
+        <SubSelector
+          arr={subPages}
+          selectedSubPage={selectedSubPage}
+          setSelectedSubPage={setSelectedSubPage}
+        />
       </div>
+      <Speaker />
     </div>
   );
 };
