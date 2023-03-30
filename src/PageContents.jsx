@@ -9,7 +9,6 @@ const PageContents = () => {
         </p>
       ))}
     </div>
-    // <div>Page contents</div>
   );
 };
 

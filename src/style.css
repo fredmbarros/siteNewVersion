@@ -24,7 +24,7 @@ h1 {
 }
 
 button {
-  border: none;
+  border: solid 1px rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -87,21 +87,25 @@ button {
   border-radius: 50%;
   margin: 0 0.5em 0 0;
   box-shadow: inset -0.15em -0.2em 0.5em rgb(0, 0, 0);
+  transition: "transform 0.1s ease-in-out";
 }
 
 .selected {
   background-color: #4f4f4f;
-  box-shadow: inset 0em 0em 0.6em rgb(0, 0, 0);
+  box-shadow: inset 0em 0em 0.5em rgb(0, 0, 0);
+  transition: "transform 0.1s ease-in-out";
 }
 
 .selector-btn-large {
   height: 2em;
   width: 2em;
+  /* background-color: #454545; */
 }
 
 .selector-btn-medium {
   height: 1em;
   width: 1em;
+  /* background-color: #454545; */
 }
 
 .selector-btn-small {
@@ -125,12 +129,13 @@ button {
 
 .sub-page-selector-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .sub-page-select {
-  align-items: center;
   display: flex;
+  align-items: center;
+  margin: 0 2em;
 }
 
 .sub-page-title {
@@ -153,7 +158,7 @@ button {
   justify-content: space-around;
   margin: 0.2em;
   border-radius: 1%;
-  background-color: #494949;
+  background-color: #212121;
   height: 100vh;
   width: auto;
   box-shadow: inset 0em 0em 0.5em rgb(0, 0, 0);
