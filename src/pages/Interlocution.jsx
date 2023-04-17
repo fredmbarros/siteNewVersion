@@ -1,5 +1,5 @@
 const Interlocution = () => {
-  return <h1>Interlocution</h1>;
+  return <h1 className="page-header">Interlocution</h1>;
 };
 
 export default Interlocution;

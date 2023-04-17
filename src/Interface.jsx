@@ -9,15 +9,13 @@ import subPageList from "./resources/subPageList";
 
 const Interface = () => {
   const [selectedPage, setSelectedPage] = useState(0);
-  const [subPages, setSubPages] = useState([]);
+  const [subPagesArr, setSubPagesArr] = useState([]);
   const [selectedSubPage, setSelectedSubPage] = useState(0);
 
-  // console.log(selectedPage);
-
   useEffect(() => {
-    // every time selectedPage changes (by clicking on another button in the PageSelector, useEffect will change the subPages state variable, picking up the array inside the subPageList object that has the same name as the button clicked - still have to check if this will work)
-    console.log(subPageList);
-    setSubPages(subPageList[selectedPage]);
+    // when you change the selected page, it always starts with the index number of the last selected subPage. Perhaps it should start every page randomly choosing which subPage, or else always start with 0 (temporarily that's the solution by setting selectedSubPage to 0 here in the useEffect). Better still, it could store what was the last selected subPage for each page and get back to it - I'll leave this for when everything else is done.
+    setSubPagesArr(subPageList[selectedPage]);
+    setSelectedSubPage(0);
   }, [selectedPage]);
 
   return (
@@ -35,7 +33,7 @@ const Interface = () => {
         </div>
       </div>
       <SubSelector
-        arr={subPages}
+        arr={subPagesArr}
         selectedSubPage={selectedSubPage}
         setSelectedSubPage={setSelectedSubPage}
       />

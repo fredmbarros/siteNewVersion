@@ -1,31 +1,39 @@
 import { useState } from "react";
 
 const ChangeLanguage = ({ language, setLanguage }) => {
-  const [showChangeLanguageBox, setShowLanguageMenu] = useState(false);
+  const [showLanguagesBox, setShowLanguagesBox] = useState(false);
 
   const availableLanguages = ["English", "Português"];
 
   const chooseLanguage = (lang) => {
+    // TODO: add clickOutside function to close the languagesBox; find way of avoiding that the languagesBox keeps floating if user opens it and then scrolls (best way is possibly that the clickOutside event also responds to scrolling, closing the box in this case too). That said, it's expected that when the user clicks on the new language it immediately starts reloading the page, not making it necessary to close the languagesBox
+    if (language === lang) return;
     setLanguage(lang);
-    setShowLanguageMenu(false);
+    // setShowLanguagesBox(false);
+  };
+
+  const changeLanguageWorkflow = () => {
+    setShowLanguagesBox(!showLanguagesBox);
+    // clickOutside function needs to be implemented here
   };
 
   return (
     <div>
       <button
-        onClick={() => setShowLanguageMenu(true)}
+        onClick={() => changeLanguageWorkflow()}
         type="button"
         name="change-language"
         className="cab-upper-frame-script"
       >
         Change language
       </button>
-      {showChangeLanguageBox && (
-        <div className="languageBox">
+      {showLanguagesBox && (
+        <div className="languages-box">
           <button
-            onClick={() => setShowLanguageMenu(false)}
+            onClick={() => setShowLanguagesBox(false)}
             type="button"
             name="close"
+            className="language-btn"
           >
             X
           </button>
@@ -36,8 +44,12 @@ const ChangeLanguage = ({ language, setLanguage }) => {
               type="button"
               name={lang}
               value={lang}
+              className={`language-btn ${
+                lang === language && "selected-language-btn"
+              }`}
             >
-              {lang === language ? lang.toUpperCase() : lang}
+              {/* {lang === language ? lang.toUpperCase() : lang} */}
+              {lang}
             </button>
           ))}
         </div>
