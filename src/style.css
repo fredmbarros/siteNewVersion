@@ -6,7 +6,8 @@
 }
 
 body {
-  background-color: #000000;
+  /* background-color: #040e03; */
+  background-image: linear-gradient(352deg, #000000, #031002, #000000);
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 1em;
@@ -25,15 +26,37 @@ h1 {
 }
 
 button {
-  border: solid 1px rgb(0, 0, 0);
+  border: none;
   background-color: rgba(0, 0, 0, 0);
 }
 
+.whole-page {
+  max-width: 960px;
+  margin: auto;
+}
 .receiver {
   width: 60em;
   height: 16em;
   border: solid #aaa 1px;
+  background-image: linear-gradient(
+    352deg,
+    rgb(23, 23, 23),
+    rgb(15, 15, 15),
+    rgb(33, 33, 33)
+  );
   /* box-shadow: 0em 0.2em 1em rgb(255, 255, 255); */
+}
+
+.border-gradient {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(
+    354deg,
+    black,
+    rgb(23, 23, 23),
+    rgb(83, 83, 83)
+  );
 }
 
 .languageBox {
@@ -61,7 +84,12 @@ button {
   justify-content: space-around;
   margin: 0.75em 2em 1.5em 2em;
   padding: 1em 0 1.5em 0;
-  border: solid 1px #aaa;
+  background-image: linear-gradient(
+    352deg,
+    rgb(20, 20, 20),
+    rgb(15, 15, 15),
+    rgb(43, 43, 43)
+  );
 }
 
 .receiver-displays {
@@ -75,11 +103,15 @@ button {
 
 .page-link {
   display: flex;
-  justify-items: baseline;
-  /* font-family: "Abril Fatface"; */
-  /* font-family: "Gajraj One"; */
-  font-family: "Crushed";
-  font-size: 1em;
+  align-items: center;
+  font-family: "Raleway";
+  height: 1.5em;
+  width: auto;
+}
+
+.page-link-text {
+  font-size: 0.8em;
+  text-transform: uppercase;
 }
 
 .selector-btn {
@@ -104,8 +136,8 @@ button {
 }
 
 .selector-btn-medium {
-  height: 1em;
-  width: 1em;
+  height: 1.2em;
+  width: 1.2em;
   /* background-color: #454545; */
 }
 
@@ -148,10 +180,19 @@ button {
 
 .speaker {
   margin-top: 0.5em;
-  border: solid rgb(90, 43, 17) 1em;
-  border-radius: 1% 1% 0 0;
+  /* border: solid rgb(90, 43, 17) 1em; */
+  /* border-radius: 1% 1% 0 0; */
   width: 60em;
   height: 100vh;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-width: 1.5em;
+  border-image-source: linear-gradient(
+    352deg,
+    rgb(42, 21, 9),
+    rgb(54, 29, 13),
+    rgb(31, 18, 12)
+  );
 }
 
 .grille {

@@ -18,8 +18,7 @@ const PageSelector = ({ selectedPage, setSelectedPage }) => {
             selected={selectedPage}
             diameter="medium"
           />
-          {/* {page.toUpperCase()} */}
-          {page}
+          <div className="page-link-text">{page}</div>
         </button>
       ))}
     </div>
