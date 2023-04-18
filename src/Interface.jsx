@@ -8,7 +8,8 @@ import VuMeter from "./VuMeter";
 import subPageList from "./resources/subPageList";
 
 const Interface = () => {
-  const [selectedPage, setSelectedPage] = useState(0);
+  const pages = Object.keys(subPageList);
+  const [selectedPage, setSelectedPage] = useState(pages[0]);
   const [subPagesArr, setSubPagesArr] = useState([]);
   const [selectedSubPage, setSelectedSubPage] = useState(0);
 
@@ -25,6 +26,7 @@ const Interface = () => {
         <PageSelector
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
+          pages={pages}
         />
         <div className="receiver-displays">
           <RadioDisplay />

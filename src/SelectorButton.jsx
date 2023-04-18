@@ -1,8 +1,8 @@
-const SelectorButton = ({ index, selected, diameter }) => {
+const SelectorButton = ({ name, selected, diameter }) => {
   return (
     <div
       className={`selector-btn ${
-        index === selected && "selected"
+        name === selected && "selected"
       } selector-btn-${diameter}`}
     ></div>
   );

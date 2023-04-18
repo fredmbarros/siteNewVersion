@@ -1,7 +1,22 @@
-const subPageList = [
-  ["about", "contact"],
-  ["undergraduate level", "graduate level"],
-  ["brazilian music in perspective", "practices of interlocution"],
-  ["music", "illustration"],
-];
+const subPageList = {
+  home: [
+    ["about", "about"],
+    ["contact", "contact"],
+  ],
+
+  teaching: [
+    ["undergrad", "undergraduate level"],
+    ["grad", "graduate level"],
+  ],
+
+  research: [
+    ["mbp", "brazilian music in perspective"],
+    ["interlocution", "practices of interlocution"],
+  ],
+
+  art: [
+    ["music", "music"],
+    ["illustration", "illustration"],
+  ],
+};
 export default subPageList;

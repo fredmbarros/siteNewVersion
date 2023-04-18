@@ -1,20 +1,18 @@
 import SelectorButton from "./SelectorButton";
 
-const PageSelector = ({ selectedPage, setSelectedPage }) => {
-  const pages = ["home", "teaching", "research", "art"];
-
+const PageSelector = ({ selectedPage, setSelectedPage, pages }) => {
   return (
     <div className="page-selector-container">
       {pages.map((page, index) => (
         <button
           className="page-link"
           key={index}
-          onClick={() => setSelectedPage(index)}
+          onClick={() => setSelectedPage(page)}
           type="button"
           name="Page Selector"
         >
           <SelectorButton
-            index={index}
+            name={page}
             selected={selectedPage}
             diameter="medium"
           />

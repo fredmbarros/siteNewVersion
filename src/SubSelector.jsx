@@ -8,16 +8,16 @@ const SubSelector = ({ arr, selectedSubPage, setSelectedSubPage }) => {
           <button
             className="sub-page-select"
             key={index}
-            onClick={() => setSelectedSubPage(index)}
+            onClick={() => setSelectedSubPage(subPage)}
             type="button"
             name="Sub-page Selector"
           >
             <SelectorButton
-              index={index}
+              name={subPage}
               selected={selectedSubPage}
               diameter="large"
             />
-            <span className="sub-page-title">{subPage}</span>
+            <span className="sub-page-title">{subPage[1]}</span>
           </button>
         ))}
       </div>

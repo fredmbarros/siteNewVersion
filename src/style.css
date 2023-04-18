@@ -139,11 +139,24 @@ button {
   /* transition: "transform 0.5s ease-in-out"; */
 }
 
-.selected {
+.page-link:active .selector-btn {
   background-color: #4f4f4f;
   box-shadow: inset 0em 0em 0.5em rgb(0, 0, 0), inset 0 0 0.3em 0.01em #f6392bc8,
     0 0 0.5em 0.1em #f6392bc8;
-  /* transition: "transform 0.5s ease-in-out"; */
+  border: solid #f6392bc8 0.05px;
+}
+
+.sub-page-select:active .selector-btn {
+  background-color: #4f4f4f;
+  box-shadow: inset 0em 0em 0.5em rgb(0, 0, 0), inset 0 0 0.3em 0.01em #f6392bc8,
+    0 0 0.5em 0.1em #f6392bc8;
+  border: solid #f6392bc8 0.05px;
+}
+
+.selected {
+  box-shadow: inset -0.15em -0.2em 0.5em rgba(0, 0, 0, 0.716),
+    0.1em 0.4em 0.2em -0.1em rgba(0, 0, 0, 0.423),
+    inset 0 0 0.3em -0.01em #f6392bc8, 0 0 0.5em 0.1em #f6392bc8;
   border: solid #f6392bc8 0.05px;
 }
 

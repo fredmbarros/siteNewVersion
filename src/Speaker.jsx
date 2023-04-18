@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // import PageContents from "./PageContents";
 import About from "./pages/About.jsx";
@@ -18,21 +18,16 @@ const Speaker = () => {
     <div className="speaker">
       <div className="grille">
         <Suspense fallback={<p>Loading...</p>}>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/home/about" element={<About />} />
-              <Route path="/home/contact" element={<Contact />} />
-              <Route path="/teaching/undergrad" element={<Undergrad />} />
-              <Route path="/teaching/grad" element={<Grad />} />
-              <Route path="/research/mbp" element={<MBP />} />
-              <Route
-                path="/research/interlocution"
-                element={<Interlocution />}
-              />
-              <Route path="/art/music" element={<Music />} />
-              <Route path="/art/illustration" element={<Illustration />} />
-            </Routes>
-          </BrowserRouter>
+          <Routes>
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/undergrad" element={<Undergrad />} />
+            <Route path="/grad" element={<Grad />} />
+            <Route path="/mbp" element={<MBP />} />
+            <Route path="/interlocution" element={<Interlocution />} />
+            <Route path="/music" element={<Music />} />
+            <Route path="/illustration" element={<Illustration />} />
+          </Routes>
           {/* <PageContents pageToLoad={pageToLoad} /> */}
         </Suspense>
       </div>
