@@ -1,4 +1,4 @@
-const subPageList = {
+const pagesObj = {
   home: [
     ["about", "about"],
     ["contact", "contact"],
@@ -19,4 +19,4 @@ const subPageList = {
     ["illustration", "illustration"],
   ],
 };
-export default subPageList;
+export default pagesObj;

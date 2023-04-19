@@ -5,18 +5,19 @@ import PageSelector from "./PageSelector";
 import RadioDisplay from "./RadioDisplay";
 import SubSelector from "./SubSelector";
 import VuMeter from "./VuMeter";
-import subPageList from "./resources/subPageList";
+import pagesObj from "./resources/pagesObj";
 
 const Interface = () => {
-  const pages = Object.keys(subPageList);
-  const [selectedPage, setSelectedPage] = useState(pages[0]);
-  const [subPagesArr, setSubPagesArr] = useState([]);
+  const pageList = Object.keys(pagesObj);
+  const [selectedPage, setSelectedPage] = useState(pageList[0]);
+  const [subPagesArr, setSubPagesArr] = useState(pagesObj[selectedPage]);
   const [selectedSubPage, setSelectedSubPage] = useState(0);
 
   useEffect(() => {
     // when you change the selected page, it always starts with the index number of the last selected subPage. Perhaps it should start every page randomly choosing which subPage, or else always start with 0 (temporarily that's the solution by setting selectedSubPage to 0 here in the useEffect). Better still, it could store what was the last selected subPage for each page and get back to it - I'll leave this for when everything else is done.
-    setSubPagesArr(subPageList[selectedPage]);
-    setSelectedSubPage(0);
+    setSubPagesArr(pagesObj[selectedPage]);
+    setSelectedSubPage(subPagesArr[0]);
+    // console.log(selectedSubPage);
   }, [selectedPage]);
 
   return (
@@ -26,7 +27,7 @@ const Interface = () => {
         <PageSelector
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
-          pages={pages}
+          pageList={pageList}
         />
         <div className="receiver-displays">
           <RadioDisplay />

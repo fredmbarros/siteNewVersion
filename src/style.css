@@ -60,21 +60,23 @@ button {
   );
 }
 
-.languages-box {
+.views-box {
   position: fixed;
   left: 4.5em;
   background-color: #dcdcdc;
-  border: solid #676767 1px;
-  border-radius: 5%;
+  border-radius: 3px;
   box-shadow: 0.3em 0.4em 0.4em -0.1em rgba(0, 0, 0, 0.713);
 }
 
-.language-btn {
+.view-btn {
   color: #676767;
   font-family: "Raleway";
 }
 
-.selected-language-btn {
+.view-btn:hover {
+  color: black;
+}
+.selected-view-btn {
   color: #000000;
   cursor: default;
 }
@@ -143,14 +145,14 @@ button {
   background-color: #4f4f4f;
   box-shadow: inset 0em 0em 0.5em rgb(0, 0, 0), inset 0 0 0.3em 0.01em #f6392bc8,
     0 0 0.5em 0.1em #f6392bc8;
-  border: solid #f6392bc8 0.05px;
+  border: solid #c64420c8 0.1px;
 }
 
 .sub-page-select:active .selector-btn {
   background-color: #4f4f4f;
   box-shadow: inset 0em 0em 0.5em rgb(0, 0, 0), inset 0 0 0.3em 0.01em #f6392bc8,
     0 0 0.5em 0.1em #f6392bc8;
-  border: solid #f6392bc8 0.05px;
+  border: solid #c64420c8 0.1px;
 }
 
 .selected {

@@ -1,23 +1,24 @@
 import { useState, useEffect } from "react";
 
+import ChangeView from "./ChangeView";
 import ChangeLanguage from "./ChangeLanguage";
-import ChangeMode from "./ChangeMode";
+import availableViews from "./resources/availableViews";
 
 const CabinetFrame = () => {
-  const [mode, setMode] = useState("dark");
+  const [view, setView] = useState(availableViews[0]);
   const [language, setLanguage] = useState("English");
 
   useEffect(() => {
     // função para recarregar a página com o novo modo ou idioma - salvar no localStorage
-    // console.log(mode, language);
-  }, [mode, language]);
+    // console.log(view, language);
+  }, [view, language]);
 
   return (
     <div>
       <div className="cabinet-upper-frame">
-        <ChangeLanguage language={language} setLanguage={setLanguage} />
+        <ChangeView view={view} setView={setView} />
         <h1>frederico barros</h1>
-        <ChangeMode mode={mode} setMode={setMode} />
+        <ChangeLanguage language={language} setLanguage={setLanguage} />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import SelectorButton from "./SelectorButton";
 
 const SubSelector = ({ arr, selectedSubPage, setSelectedSubPage }) => {
+  console.log(selectedSubPage);
   if (arr) {
     return (
       <div className="sub-page-selector-container">
