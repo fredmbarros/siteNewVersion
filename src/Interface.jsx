@@ -10,15 +10,14 @@ import pagesObj from "./resources/pagesObj";
 const Interface = () => {
   const pageList = Object.keys(pagesObj);
   const [selectedPage, setSelectedPage] = useState(pageList[0]);
-  const [subPagesArr, setSubPagesArr] = useState(pagesObj[selectedPage]);
-  const [selectedSubPage, setSelectedSubPage] = useState(0);
+  const [subPageList, setSubPageList] = useState(pagesObj[selectedPage]);
+  const [selectedSubPage, setSelectedSubPage] = useState("");
 
   useEffect(() => {
-    // when you change the selected page, it always starts with the index number of the last selected subPage. Perhaps it should start every page randomly choosing which subPage, or else always start with 0 (temporarily that's the solution by setting selectedSubPage to 0 here in the useEffect). Better still, it could store what was the last selected subPage for each page and get back to it - I'll leave this for when everything else is done.
-    setSubPagesArr(pagesObj[selectedPage]);
-    setSelectedSubPage(subPagesArr[0]);
-    // console.log(selectedSubPage);
-  }, [selectedPage]);
+    // when you change the selected page, it could store what was the last selected subPage for each page and get back to it - I'll leave this for when everything else is done.
+    setSubPageList(pagesObj[selectedPage]);
+    setSelectedSubPage(subPageList[0].pageName);
+  }, [selectedPage, subPageList]);
 
   return (
     <div className="receiver border-gradient">
@@ -36,7 +35,7 @@ const Interface = () => {
         </div>
       </div>
       <SubSelector
-        arr={subPagesArr}
+        subPageList={subPageList}
         selectedSubPage={selectedSubPage}
         setSelectedSubPage={setSelectedSubPage}
       />

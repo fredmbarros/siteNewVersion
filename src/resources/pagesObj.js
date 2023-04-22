@@ -1,22 +1,22 @@
 const pagesObj = {
   home: [
-    ["about", "about"],
-    ["contact", "contact"],
+    { pageName: "about", displayName: "about" },
+    { pageName: "contact", displayName: "contact" },
   ],
 
   teaching: [
-    ["undergrad", "undergraduate level"],
-    ["grad", "graduate level"],
+    { pageName: "undergrad", displayName: "undergraduate level" },
+    { pageName: "grad", displayName: "graduate level" },
   ],
 
   research: [
-    ["mbp", "brazilian music in perspective"],
-    ["interlocution", "practices of interlocution"],
+    { pageName: "mbp", displayName: "brazilian music in perspective" },
+    { pageName: "interlocution", displayName: "practices of interlocution" },
   ],
 
   art: [
-    ["music", "music"],
-    ["illustration", "illustration"],
+    { pageName: "music", displayName: "music" },
+    { pageName: "illustration", displayName: "illustration" },
   ],
 };
 export default pagesObj;
