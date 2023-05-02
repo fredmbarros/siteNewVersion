@@ -19,6 +19,10 @@ const Interface = () => {
     setSelectedSubPage(subPageList[0].pageName);
   }, [selectedPage, subPageList]);
 
+  // useEffect(() => {
+  //   console.log(selectedSubPage);
+  // }, [selectedSubPage]);
+
   return (
     <div className="receiver border-gradient">
       <CabinetFrame />
