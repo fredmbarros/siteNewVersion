@@ -1,6 +1,11 @@
 import SelectorButton from "./SelectorButton";
 
 const SubSelector = ({ subPageList, selectedSubPage, setSelectedSubPage }) => {
+  const subPageSelect = ({ pageName }) => {
+    setSelectedSubPage(pageName);
+    location.href = `/${pageName}`;
+  };
+
   if (subPageList) {
     return (
       <div className="sub-page-selector-container">
@@ -8,7 +13,7 @@ const SubSelector = ({ subPageList, selectedSubPage, setSelectedSubPage }) => {
           <button
             className="sub-page-select"
             key={index}
-            onClick={() => setSelectedSubPage(subPage.pageName)}
+            onClick={() => subPageSelect(subPage)}
             type="button"
             name="Sub-page Selector"
           >
