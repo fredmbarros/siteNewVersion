@@ -25,7 +25,7 @@ const SubSelector = ({
             <SelectorButton
               name={subPage.pageName}
               selected={selectedSubPage}
-              diameter="large"
+              diameter="medium"
             />
             <span className="sub-page-title">{subPage.displayName}</span>
           </button>

@@ -14,7 +14,7 @@ const PageSelector = ({ selectedPage, setSelectedPage, pageList }) => {
           <SelectorButton
             name={page}
             selected={selectedPage}
-            diameter="medium"
+            diameter="small"
           />
           <div className="page-link-text">{page}</div>
         </button>

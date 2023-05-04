@@ -162,22 +162,22 @@ button {
   border: solid #f6392bc8 0.05px;
 }
 
-.selector-btn-large {
+.selector-btn-medium {
   height: 2em;
   width: 2em;
   /* background-color: #454545; */
 }
 
-.selector-btn-medium {
+.selector-btn-small {
   height: 1.2em;
   width: 1.2em;
   /* background-color: #454545; */
 }
 
-.selector-btn-small {
+/* .selector-btn-small {
   height: 0.5em;
   width: 0.5em;
-}
+} */
 
 .radio-display {
   border: none;
