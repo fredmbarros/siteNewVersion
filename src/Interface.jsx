@@ -17,7 +17,6 @@ const Interface = () => {
 
   useEffect(() => {
     setSubPageList(pagesObj[selectedPage]);
-    setSelectedSubPage(null);
   }, [selectedPage, subPageList]);
 
   return (
@@ -27,6 +26,7 @@ const Interface = () => {
         <PageSelector
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
+          setSelectedSubPage={setSelectedSubPage}
           pageList={pageList}
           navigateTo={navigateTo}
         />

@@ -3,12 +3,13 @@ import SelectorButton from "./SelectorButton";
 const PageSelector = ({
   selectedPage,
   setSelectedPage,
+  setSelectedSubPage,
   pageList,
   navigateTo,
 }) => {
   const pageSelect = (page) => {
     setSelectedPage(page);
-    console.log(page);
+    setSelectedSubPage(null);
     navigateTo(`/${page}`);
   };
 
