@@ -16,9 +16,8 @@ const Interface = () => {
   const [selectedSubPage, setSelectedSubPage] = useState(null);
 
   useEffect(() => {
-    // when you change the selected page, it could store what was the last selected subPage for each page and get back to it - I'll leave this for when everything else is done.
     setSubPageList(pagesObj[selectedPage]);
-    setSelectedSubPage(subPageList[0].pageName);
+    setSelectedSubPage(null);
   }, [selectedPage, subPageList]);
 
   return (
@@ -29,6 +28,7 @@ const Interface = () => {
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
           pageList={pageList}
+          navigateTo={navigateTo}
         />
         <div className="receiver-displays">
           <RadioDisplay />

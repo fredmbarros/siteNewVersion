@@ -9,7 +9,7 @@ const CabinetFrame = () => {
   const [language, setLanguage] = useState("EN");
 
   useEffect(() => {
-    // função para recarregar a página com o novo modo ou idioma - salvar no localStorage
+    // function to reload page with new mode or new language - save in localStorage
     // console.log(view, language);
   }, [view, language]);
 

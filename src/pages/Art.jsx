@@ -1,10 +1,9 @@
 const Art = () => {
   return (
     <div>
-      <h1 className="page-header">Art</h1>;
+      <h1 className="page-header">Art</h1>
       <p>
-        Please use the commands above in the receiver to check Illustration and
-        Music
+        Please use the buttons in the receiver to check Illustration and Music
       </p>
     </div>
   );

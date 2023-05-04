@@ -1,13 +1,24 @@
 import SelectorButton from "./SelectorButton";
 
-const PageSelector = ({ selectedPage, setSelectedPage, pageList }) => {
+const PageSelector = ({
+  selectedPage,
+  setSelectedPage,
+  pageList,
+  navigateTo,
+}) => {
+  const pageSelect = (page) => {
+    setSelectedPage(page);
+    console.log(page);
+    navigateTo(`/${page}`);
+  };
+
   return (
     <div className="page-selector-container">
       {pageList.map((page, index) => (
         <button
           className="page-link"
           key={index}
-          onClick={() => setSelectedPage(page)}
+          onClick={() => pageSelect(page)}
           type="button"
           name="Page Selector"
         >

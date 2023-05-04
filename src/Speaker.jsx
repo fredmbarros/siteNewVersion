@@ -1,7 +1,10 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
-// import PageContents from "./PageContents";
+import Home from "./pages/Home.jsx";
+import Teaching from "./pages/Teaching.jsx";
+import Research from "./pages/Research.jsx";
+import Art from "./pages/Art.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import Undergrad from "./pages/Undergrad.jsx";
@@ -19,6 +22,10 @@ const Speaker = () => {
       <div className="grille">
         <Suspense fallback={<p>Loading...</p>}>
           <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/teaching" element={<Teaching />} />
+            <Route path="/research" element={<Research />} />
+            <Route path="/art" element={<Art />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/undergrad" element={<Undergrad />} />
@@ -28,7 +35,6 @@ const Speaker = () => {
             <Route path="/music" element={<Music />} />
             <Route path="/illustration" element={<Illustration />} />
           </Routes>
-          {/* <PageContents pageToLoad={pageToLoad} /> */}
         </Suspense>
       </div>
     </div>

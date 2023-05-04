@@ -1,10 +1,10 @@
 const Home = () => {
   return (
     <div>
-      <h1 className="page-header">Home</h1>;
+      <h1 className="page-header">Home</h1>
       <p>
-        Please use the commands above in the receiver to get more info about me
-        or contact me
+        Please use the buttons in the receiver to get more info about me or
+        contact me
       </p>
     </div>
   );
