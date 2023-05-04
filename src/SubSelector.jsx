@@ -1,9 +1,14 @@
 import SelectorButton from "./SelectorButton";
 
-const SubSelector = ({ subPageList, selectedSubPage, setSelectedSubPage }) => {
+const SubSelector = ({
+  subPageList,
+  selectedSubPage,
+  setSelectedSubPage,
+  navigateTo,
+}) => {
   const subPageSelect = ({ pageName }) => {
     setSelectedSubPage(pageName);
-    location.href = `/${pageName}`;
+    navigateTo(`/${pageName}`);
   };
 
   if (subPageList) {
