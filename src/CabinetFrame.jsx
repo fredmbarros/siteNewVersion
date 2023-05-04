@@ -6,7 +6,7 @@ import availableViews from "./resources/availableViews";
 
 const CabinetFrame = () => {
   const [view, setView] = useState(availableViews[0]);
-  const [language, setLanguage] = useState("English");
+  const [language, setLanguage] = useState("EN");
 
   useEffect(() => {
     // função para recarregar a página com o novo modo ou idioma - salvar no localStorage

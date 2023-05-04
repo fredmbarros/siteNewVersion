@@ -1,17 +1,18 @@
 const ChangeLanguage = ({ language, setLanguage }) => {
-  const Languages = ["English", "Português"];
-  let altLanguage = Languages.filter((el) => el !== language).toString();
-
+  const Languages = { EN: "Switch to English", PT: "Mudar para Português" };
+  const altLang = Object.keys(Languages)
+    .filter((l) => l !== language)
+    .toString();
   return (
     <div>
       <button
-        onClick={() => setLanguage(altLanguage)}
+        onClick={() => setLanguage(altLang)}
         type="button"
         name="choose-language"
-        value={altLanguage}
+        value={altLang}
         className="cab-upper-frame-script"
       >
-        Switch to {altLanguage}
+        {Languages[altLang]}
       </button>
     </div>
   );
