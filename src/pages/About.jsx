@@ -41,6 +41,7 @@ const About = () => {
         they enjoy as listeners etc.) runs across all my research work and, in a
         sense, is the underlying element that gives meaning to everything else.
       </p>
+      <p>[teaching philosophy]</p>
       <p>
         This is not to say, however, that I am not interested in &apos;the notes
         themselves&apos;. I am keenly interested in them, both as a musician and
@@ -48,7 +49,6 @@ const About = () => {
         though I find it hard to think of them as actually being notes and only
         notes for the sake of notes.
       </p>
-
       <p>
         Among the multiple interests I have, music has probably been the deepest
         and most enduring of them. So much so that I made it my profession. That
@@ -59,6 +59,13 @@ const About = () => {
         developer and, after leaving my steady job in the field, decided to code
         this website from scratch to keep flexing my coding muscles.
       </p>
+      <a href="https://www.credly.com/badges/7679cbf1-eb1e-4f55-9e0c-e42e72ba926e/public_url">
+        <img
+          src="./resources/badgeWES-96.png"
+          className="badge-wes"
+          alt="World Education Services badge"
+        ></img>
+      </a>
     </div>
   );
 };

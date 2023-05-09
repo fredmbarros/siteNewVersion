@@ -393,3 +393,8 @@ button {
   color: white;
   font-size: x-large;
 }
+
+.badge-wes {
+  position: relative;
+  margin: 2em;
+}
