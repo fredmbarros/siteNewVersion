@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { /*lazy,*/ Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home.jsx";
@@ -14,7 +14,7 @@ import Interlocution from "./pages/Interlocution.jsx";
 import Music from "./pages/Music.jsx";
 import Illustration from "./pages/Illustration.jsx";
 
-const pageToLoad = lazy(() => import(`./pages/${pageToLoad}.js`));
+// const pageToLoad = lazy(() => import(`./pages/${pageToLoad}.jsx`));
 
 const Speaker = () => {
   return (

@@ -51,19 +51,13 @@ const About = () => {
 
       <p>
         Among the multiple interests I have, music has probably been the deepest
-        and most enduring* of them. So much so that I made it my profession.
-        That said, I am also interested in the visual arts, design and
-        technology. I have done some freelance work as an illustrator and often
-        draw as a past time or for my own projects. On the technology side,
-        while on leave from my duties at the university and living in Canada, I
-        have worked as a web developer and, after leaving my steady job in the
-        field, decided to code this website from scratch to keep flexing my
-        coding muscles.
-      </p>
-
-      <p>
-        * it's complicated, and even with music I went through a deep crisis —
-        blame it on 2020...
+        and most enduring of them. So much so that I made it my profession. That
+        said, I am also interested in the visual arts, design and technology. I
+        have done some freelance work as an illustrator and often draw as a past
+        time or for my own projects. On the technology side, while on leave from
+        my duties at the university and living in Canada, I have worked as a web
+        developer and, after leaving my steady job in the field, decided to code
+        this website from scratch to keep flexing my coding muscles.
       </p>
     </div>
   );
