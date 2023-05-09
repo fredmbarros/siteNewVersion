@@ -1,8 +1,5 @@
 const ChangeLanguage = ({ language, setLanguage }) => {
-  const Languages = { EN: "Switch to English", PT: "Mudar para Português" };
-  const altLang = Object.keys(Languages)
-    .filter((l) => l !== language)
-    .toString();
+  const altLang = language === "PT" ? "EN" : "PT";
   return (
     <div>
       <button
@@ -12,7 +9,7 @@ const ChangeLanguage = ({ language, setLanguage }) => {
         value={altLang}
         className="cab-upper-frame-script"
       >
-        {Languages[altLang]}
+        {altLang}
       </button>
     </div>
   );
