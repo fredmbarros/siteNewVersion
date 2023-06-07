@@ -11,12 +11,17 @@ import pagesObj from "./resources/pagesObj";
 const Interface = () => {
   const navigateTo = useNavigate();
   const pageList = Object.keys(pagesObj);
-  const [selectedPage, setSelectedPage] = useState(pageList[0]);
+  let sessionSelectedPage =
+    sessionStorage.getItem("currentPage") ?? pageList[0];
+  sessionSelectedPage ?? navigateTo("/home");
+
+  const [selectedPage, setSelectedPage] = useState(sessionSelectedPage);
   const [subPageList, setSubPageList] = useState(pagesObj[selectedPage]);
   const [selectedSubPage, setSelectedSubPage] = useState(null);
 
   useEffect(() => {
     setSubPageList(pagesObj[selectedPage]);
+    sessionStorage.setItem("currentPage", selectedPage);
   }, [selectedPage, subPageList]);
 
   return (

@@ -1,5 +1,5 @@
-import { /*lazy,*/ Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Suspense } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import Home from "./pages/Home.jsx";
 import Teaching from "./pages/Teaching.jsx";
@@ -14,14 +14,13 @@ import Interlocution from "./pages/Interlocution.jsx";
 import Music from "./pages/Music.jsx";
 import Illustration from "./pages/Illustration.jsx";
 
-// const pageToLoad = lazy(() => import(`./pages/${pageToLoad}.jsx`));
-
 const Speaker = () => {
   return (
     <div className="speaker">
       <div className="grille">
         <Suspense fallback={<p>Loading...</p>}>
           <Routes>
+            <Route exact path="/" element={<Navigate to="/home" />} />
             <Route path="/home" element={<Home />} />
             <Route path="/teaching" element={<Teaching />} />
             <Route path="/research" element={<Research />} />
