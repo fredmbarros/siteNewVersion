@@ -330,12 +330,7 @@ button {
 
 .vu-meter-scale {
   position: relative;
-  /* border: solid 2px;
-  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
-  border-radius: 50%; */
-  top: 20px;
-  /* width: 100px; */
-  /* height: 2.5em; */
+  top: 14px;
   margin: 0 8px;
 }
 

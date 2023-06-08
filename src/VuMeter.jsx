@@ -1,4 +1,4 @@
-import VuMeterScale from "./resources/vu-meter.svg";
+import VuMeterScale from "./resources/vu-meter-narrow.svg";
 
 const VuMeter = () => {
   return (
