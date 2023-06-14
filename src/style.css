@@ -64,10 +64,16 @@ button {
   );
 }
 
+.views-langs-container {
+  position: relative;
+}
+
 .views-box {
   /* have to find a more responsive solution for this positioning while still keeping it floating over the other elements on the page */
-  position: fixed;
-  left: 4.5em;
+  position: absolute;
+  display: flex;
+  left: 1.5em;
+  width: auto;
   background-color: #dcdcdc;
   border-radius: 3px;
   box-shadow: 0.3em 0.4em 0.4em -0.1em rgba(0, 0, 0, 0.713);
@@ -75,8 +81,9 @@ button {
 
 .languages-box {
   /* idem */
-  position: fixed;
-  right: 9em;
+  position: absolute;
+  display: flex;
+  right: 0.5em;
   background-color: #dcdcdc;
   border-radius: 3px;
   box-shadow: 0.3em 0.4em 0.4em -0.1em rgba(0, 0, 0, 0.713);
@@ -85,6 +92,8 @@ button {
 .view-btn {
   color: #676767;
   font-family: "Raleway";
+  white-space: nowrap;
+  margin: 0.25em;
 }
 
 .view-btn:hover {

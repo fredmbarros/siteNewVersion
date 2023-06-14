@@ -20,7 +20,7 @@ const ChangeLanguage = ({ language, setLanguage }) => {
   };
 
   return (
-    <div>
+    <div className="views-langs-container">
       <button
         onClick={() => changeLanguageWorkflow()}
         type="button"
