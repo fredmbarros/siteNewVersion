@@ -65,8 +65,18 @@ button {
 }
 
 .views-box {
+  /* have to find a more responsive solution for this positioning while still keeping it floating over the other elements on the page */
   position: fixed;
   left: 4.5em;
+  background-color: #dcdcdc;
+  border-radius: 3px;
+  box-shadow: 0.3em 0.4em 0.4em -0.1em rgba(0, 0, 0, 0.713);
+}
+
+.languages-box {
+  /* idem */
+  position: fixed;
+  right: 9em;
   background-color: #dcdcdc;
   border-radius: 3px;
   box-shadow: 0.3em 0.4em 0.4em -0.1em rgba(0, 0, 0, 0.713);

@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import availableViews from "./resources/availableViews";
 
+// TODO: make code more DRY by extracting a component that is fed either with languages or views
+
 const ChangeView = ({ view, setView }) => {
   const [showViewsBox, setShowViewsBox] = useState(false);
 
