@@ -7,18 +7,17 @@ import availableLanguages from "./resources/availableLanguages";
 
 const ChangeLanguage = () => {
   const { language, setLanguage } = useContext(StoreContext);
-
-  const [showLanguagessBox, setShowLanguagesBox] = useState(false);
+  const [showLanguagesBox, setShowLanguagesBox] = useState(false);
 
   const chooseLanguage = (currentLanguage) => {
-    // TODO: add clickOutside function to close the languages box
+    // TODO: add clickOutside function to close the LanguagesBox
     if (language === currentLanguage) return;
     setLanguage(currentLanguage);
-    // setShowLanguagesBox(false);
+    setShowLanguagesBox(false);
   };
 
   const changeLanguageWorkflow = () => {
-    setShowLanguagesBox(!showLanguagessBox);
+    setShowLanguagesBox(!showLanguagesBox);
     // clickOutside function needs to be implemented here
   };
 
@@ -32,7 +31,7 @@ const ChangeLanguage = () => {
       >
         Change Language
       </button>
-      {showLanguagessBox && (
+      {showLanguagesBox && (
         <div className="languages-box">
           <button
             onClick={() => setShowLanguagesBox(false)}
