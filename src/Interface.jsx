@@ -8,7 +8,7 @@ import SubSelector from "./SubSelector";
 import VuMeter from "./VuMeter";
 import pagesObj from "./resources/pagesObj";
 
-const Interface = () => {
+const Interface = ({ view, setView, language, setLanguage }) => {
   const navigateTo = useNavigate();
   const pageList = Object.keys(pagesObj);
   let sessionSelectedPage =
@@ -26,7 +26,12 @@ const Interface = () => {
 
   return (
     <div className="receiver border-gradient">
-      <CabinetFrame />
+      <CabinetFrame
+        view={view}
+        setView={setView}
+        language={language}
+        setLanguage={setLanguage}
+      />
       <div className="receiver-main border-gradient">
         <PageSelector
           selectedPage={selectedPage}

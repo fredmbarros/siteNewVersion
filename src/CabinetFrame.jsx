@@ -1,13 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 import ChangeView from "./ChangeView";
 import ChangeLanguage from "./ChangeLanguage";
-import availableViews from "./resources/availableViews";
 
-const CabinetFrame = () => {
-  const [view, setView] = useState(availableViews[0]);
-  const [language, setLanguage] = useState("EN");
-
+const CabinetFrame = ({ view, setView, language, setLanguage }) => {
   useEffect(() => {
     // function to reload page with new mode or new language - save in localStorage
     // console.log(view, language);

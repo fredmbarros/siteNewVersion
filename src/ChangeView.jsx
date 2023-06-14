@@ -11,7 +11,8 @@ const ChangeView = ({ view, setView }) => {
     // TODO: add clickOutside function to close the ViewsBox; find way of avoiding that the ViewsBox keeps floating if user opens it and then scrolls (best way is possibly that the clickOutside event also responds to scrolling, closing the box in this case too). That said, it's expected that when the user clicks on the new View it immediately starts reloading the page, not making it necessary to close the ViewsBox
     if (view === currentView) return;
     setView(currentView);
-    // setShowViewsBox(false);
+    localStorage.setItem("view", view);
+    setShowViewsBox(false);
   };
 
   const changeViewWorkflow = () => {
