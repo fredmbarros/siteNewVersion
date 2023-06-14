@@ -10,12 +10,12 @@ const About = () => {
     <div>
       <h1 className="page-header">About</h1>
       <p>
-        I am Music History professor at the Federal University of Rio de Janeiro
-        since 2015. Though it is called &quot;Adjunct Professor&quot;, my
-        position corresponds to that of a tenured Assistant Professor in North
-        American terms. Before that, I taught Ethnomusicology as a sessional
-        (which we call &quot;substitute professor&quot; in Brazil) at the same
-        institution for one year.
+        I am a Music History professor at the Federal University of Rio de
+        Janeiro since 2015. Though it is called &quot;Adjunct Professor&quot;,
+        my position corresponds to that of a tenured Assistant Professor in
+        North American terms. Before that, I taught Ethnomusicology as a
+        sessional (which we call &quot;substitute professor&quot; in Brazil) at
+        the same institution for one year.
       </p>
       <p>
         I graduated and got my Master&apos;s degree in History, at the Federal
