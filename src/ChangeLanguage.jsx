@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
+import { StoreContext } from "./store/Store";
 import availableLanguages from "./resources/availableLanguages";
 
 // TODO: make code more DRY by extracting a component that is fed either with languages or views
 
-const ChangeLanguage = ({ language, setLanguage }) => {
+const ChangeLanguage = () => {
+  const { language, setLanguage } = useContext(StoreContext);
+
   const [showLanguagessBox, setShowLanguagesBox] = useState(false);
 
   const chooseLanguage = (currentLanguage) => {

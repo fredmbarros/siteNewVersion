@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
+import { StoreContext } from "./store/Store";
 import availableViews from "./resources/availableViews";
 
 // TODO: make code more DRY by extracting a component that is fed either with languages or views
 
-const ChangeView = ({ view, setView }) => {
+const ChangeView = () => {
+  const { view, setView } = useContext(StoreContext);
   const [showViewsBox, setShowViewsBox] = useState(false);
 
   const chooseView = (currentView) => {
