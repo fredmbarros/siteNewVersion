@@ -13,6 +13,7 @@ import MBP from "./pages/MBP.jsx";
 import Interlocution from "./pages/Interlocution.jsx";
 import Music from "./pages/Music.jsx";
 import Illustration from "./pages/Illustration.jsx";
+import Software from "./pages/Software.jsx";
 
 const Speaker = () => {
   return (
@@ -33,6 +34,7 @@ const Speaker = () => {
             <Route path="/interlocution" element={<Interlocution />} />
             <Route path="/music" element={<Music />} />
             <Route path="/illustration" element={<Illustration />} />
+            <Route path="/software" element={<Software />} />
           </Routes>
         </Suspense>
       </div>

@@ -17,6 +17,7 @@ const pagesObj = {
   art: [
     { pageName: "music", displayName: "music" },
     { pageName: "illustration", displayName: "illustration" },
+    { pageName: "software", displayName: "software" },
   ],
 };
 export default pagesObj;
