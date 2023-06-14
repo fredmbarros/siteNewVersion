@@ -29,7 +29,6 @@ const Interface = () => {
       <CabinetFrame />
       <div className="receiver-main border-gradient">
         <PageSelector
-          selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
           setSelectedSubPage={setSelectedSubPage}
           pageList={pageList}
