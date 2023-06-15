@@ -24,7 +24,7 @@ const ChangeView = () => {
   };
 
   return (
-    <div className="views-langs-container">
+    <div className="views-langs-container left">
       <button
         onClick={() => changeViewWorkflow()}
         type="button"

@@ -71,6 +71,16 @@ button {
 
 .views-langs-container {
   position: relative;
+  width: 9em;
+  display: flex;
+}
+
+.left {
+  justify-content: left;
+}
+
+.right {
+  justify-content: right;
 }
 
 .views-box {
