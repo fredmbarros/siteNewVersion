@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Tangerine&family=Raleway&family=Gajraj+One&family=Crushed&family=Exo");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nanum+Gothic&family=Tangerine&family=Raleway&family=Gajraj+One&family=Crushed&family=Exo");
 
 * {
   box-sizing: border-box;
@@ -17,7 +17,13 @@ p {
   margin: 0.5em;
 }
 
-h1 {
+.receiver h1 {
+  font-family: "Gajraj One";
+  font-size: 1.6em;
+  margin: 0;
+}
+
+.almost-flat h1 {
   font-family: "Nanum Gothic";
   font-size: 2em;
   margin: 0.5em;
@@ -48,7 +54,6 @@ button {
     rgb(15, 15, 15),
     rgb(33, 33, 33)
   );
-  /* box-shadow: 0em 0.2em 1em rgb(255, 255, 255); */
 }
 
 .border-gradient {
@@ -68,7 +73,6 @@ button {
 }
 
 .views-box {
-  /* have to find a more responsive solution for this positioning while still keeping it floating over the other elements on the page */
   position: absolute;
   display: flex;
   left: 1.5em;
@@ -79,7 +83,6 @@ button {
 }
 
 .languages-box {
-  /* idem */
   position: absolute;
   display: flex;
   right: 0.5em;
@@ -377,7 +380,7 @@ button {
 .sub-page-title {
   font-size: 1.5em;
   /* font-family: "Abril Fatface"; */
-  font-family: "Nanum Gothic";
+  font-family: "Gajraj One";
   /* font-family: "Crushed"; */
 }
 
@@ -424,7 +427,7 @@ button {
 }
 
 .page-header {
-  font-family: "Nanum Gothic";
+  font-family: "Gajraj One";
   color: white;
   font-size: x-large;
 }
