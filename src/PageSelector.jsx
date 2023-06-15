@@ -1,12 +1,16 @@
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { StoreContext } from "./store/Store";
+
 import SelectorButton from "./SelectorButton";
 
-const PageSelector = ({
-  selectedPage,
-  setSelectedPage,
-  setSelectedSubPage,
-  pageList,
-  navigateTo,
-}) => {
+const PageSelector = () => {
+  const navigateTo = useNavigate();
+
+  const { setSelectedPage, setSelectedSubPage, pageList, selectedPage } =
+    useContext(StoreContext);
+
   const pageSelect = (page) => {
     setSelectedPage(page);
     setSelectedSubPage(null);
