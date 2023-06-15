@@ -1,11 +1,15 @@
-import SelectorButton from "./SelectorButton";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
-const SubSelector = ({
-  subPageList,
-  selectedSubPage,
-  setSelectedSubPage,
-  navigateTo,
-}) => {
+import SelectorButton from "./SelectorButton";
+import { StoreContext } from "./store/Store";
+
+const SubSelector = () => {
+  const navigateTo = useNavigate();
+
+  const { setSelectedSubPage, subPageList, selectedSubPage } =
+    useContext(StoreContext);
+
   const subPageSelect = ({ pageName }) => {
     setSelectedSubPage(pageName);
     navigateTo(`/${pageName}`);

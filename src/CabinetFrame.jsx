@@ -1,5 +1,6 @@
-// import { useEffect } from "react";
+import { useContext } from "react";
 
+import { StoreContext } from "./store/Store";
 import ChangeView from "./ChangeView";
 import ChangeLanguage from "./ChangeLanguage";
 
@@ -9,11 +10,14 @@ const CabinetFrame = () => {
   //   // console.log(view, language);
   // }, [view, language]);
 
+  const { view } = useContext(StoreContext);
+
   return (
     <div>
       <div className="cabinet-upper-frame">
-        <ChangeView />
+        {view === "receiver" && <ChangeView />}
         <h1>frederico barros</h1>
+        {view !== "receiver" && <ChangeView />}
         <ChangeLanguage />
       </div>
     </div>
