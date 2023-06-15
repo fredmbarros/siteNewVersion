@@ -52,7 +52,7 @@ const ChangeView = () => {
               value={v}
               className={`view-btn ${v === view && "selected-view-btn"}`}
             >
-              {(v.charAt(0).toUpperCase() + v.slice(1)).replace(/-/g, " ")}
+              {v.charAt(0).toUpperCase() + v.slice(1)}
             </button>
           ))}
         </div>
