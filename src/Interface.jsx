@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
 
 import { StoreContext } from "./store/Store";
 
+import pagesObj from "./resources/pagesObj";
 import CabinetFrame from "./CabinetFrame";
 import PageSelector from "./PageSelector";
 import RadioDisplay from "./RadioDisplay";
@@ -10,27 +10,15 @@ import SubSelector from "./SubSelector";
 import VuMeter from "./VuMeter";
 
 const Interface = () => {
-  // const navigateTo = useNavigate();
-
-  const {
-    // sessionSelectedPage,
-    pagesObj,
-    setSubPageList,
-    selectedPage,
-    subPageList,
-  } = useContext(StoreContext);
-
-  // useEffect(() => {
-  //   sessionSelectedPage ?? navigateTo("/home");
-  // }, []);
+  const { setSubPageList, selectedPage } = useContext(StoreContext);
 
   useEffect(() => {
     setSubPageList(pagesObj[selectedPage]);
     sessionStorage.setItem("currentPage", selectedPage);
-  }, [selectedPage, subPageList, pagesObj, setSubPageList]);
+  }, [selectedPage, setSubPageList]);
 
   return (
-    <div className="receiver border-gradient">
+    <div className="receiver-cab border-gradient">
       <CabinetFrame />
       <div className="receiver-main border-gradient">
         <PageSelector />

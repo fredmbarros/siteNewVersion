@@ -1,6 +1,7 @@
-import { Suspense } from "react";
+import { Suspense /* useContext */ } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
+// import { StoreContext } from "./store/Store.jsx";
 import Home from "./pages/Home.jsx";
 import Teaching from "./pages/Teaching.jsx";
 import Research from "./pages/Research.jsx";
@@ -16,6 +17,8 @@ import Illustration from "./pages/Illustration.jsx";
 import Software from "./pages/Software.jsx";
 
 const Speaker = () => {
+  // const { view } = useContext(StoreContext);
+
   return (
     <div className="speaker">
       <div className="grille">

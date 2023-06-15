@@ -17,18 +17,18 @@ p {
   margin: 0.5em;
 }
 
-.receiver h1 {
+h1 {
   font-family: "Gajraj One";
   font-size: 1.6em;
   margin: 0;
 }
 
-.almost-flat h1 {
+/* .almost-flat h1 {
   font-family: "Nanum Gothic";
   font-size: 2em;
   margin: 0.5em;
   text-transform: uppercase;
-}
+} */
 
 button {
   border: none;
@@ -44,7 +44,8 @@ button {
   max-width: 960px;
   margin: auto;
 }
-.receiver {
+
+.receiver-cab {
   width: 60em;
   height: 16em;
   border: solid #aaa 1px;
@@ -111,6 +112,12 @@ button {
   justify-content: space-between;
   align-items: baseline;
 }
+
+/* .almost-flat .cabinet-upper-frame {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+} */
 
 .cab-upper-frame-script {
   font-family: "Tangerine";
@@ -386,10 +393,8 @@ button {
 
 .speaker {
   margin-top: 0.5em;
-  /* border: solid rgb(90, 43, 17) 1em; */
-  /* border-radius: 1% 1% 0 0; */
   width: 60em;
-  height: 100vh;
+  height: auto;
   border: 1px solid;
   border-image-slice: 1;
   border-width: 1.5em;
@@ -401,7 +406,33 @@ button {
   );
 }
 
+/* .almost-flat .speaker {
+  margin-top: 0.5em;
+  width: 60em;
+  height: 100vh;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-width: 1.5em;
+  border-image-source: linear-gradient(
+    352deg,
+    rgb(42, 21, 9),
+    rgb(54, 29, 13),
+    rgb(31, 18, 12)
+  );
+} */
+
 .grille {
+  display: flex;
+  margin: 0.2em;
+  padding: 6em 8em;
+  border-radius: 1%;
+  background-color: #212121;
+  height: auto;
+  width: auto;
+  box-shadow: inset 0em 0em 0.5em rgb(0, 0, 0);
+}
+
+/* .almost-flat .grille {
   display: flex;
   justify-content: space-around;
   margin: 0.2em;
@@ -411,7 +442,7 @@ button {
   height: 100vh;
   width: auto;
   box-shadow: inset 0em 0em 0.5em rgb(0, 0, 0);
-}
+} */
 
 .page-contents-wrapper {
   position: relative;
