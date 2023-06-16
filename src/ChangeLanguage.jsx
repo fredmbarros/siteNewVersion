@@ -6,7 +6,7 @@ import availableLanguages from "./resources/availableLanguages";
 // TODO: make code more DRY by extracting a component that is fed either with languages or views
 
 const ChangeLanguage = () => {
-  const { language, setLanguage } = useContext(StoreContext);
+  const { view, language, setLanguage } = useContext(StoreContext);
   const [showLanguagesBox, setShowLanguagesBox] = useState(false);
 
   const chooseLanguage = (currentLanguage) => {
@@ -27,9 +27,9 @@ const ChangeLanguage = () => {
         onClick={() => changeLanguageWorkflow()}
         type="button"
         name="change-view"
-        className="cab-upper-frame-script"
+        className="cab-upper-frame-text"
       >
-        Change Language
+        {view === "receiver" ? "Change Language" : "lang"}
       </button>
       {showLanguagesBox && (
         <div className="languages-box">

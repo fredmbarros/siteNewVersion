@@ -12,16 +12,28 @@ const CabinetFrame = () => {
 
   const { view } = useContext(StoreContext);
 
-  return (
-    <div>
-      <div className="cabinet-upper-frame">
-        {view === "receiver" && <ChangeView />}
-        <h1>frederico barros</h1>
-        {view !== "receiver" && <ChangeView />}
-        <ChangeLanguage />
+  if (view === "receiver") {
+    return (
+      <div>
+        <div className="cabinet-upper-frame">
+          <ChangeView />
+          <h1>frederico barros</h1>
+          <ChangeLanguage />
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="cabinet-upper-frame">
+        <h1 className="site-name">frederico barros</h1>
+        <div className="change-view-lang-container">
+          <ChangeView />
+          <span>/</span>
+          <ChangeLanguage />
+        </div>
+      </div>
+    );
+  }
 };
 
 export default CabinetFrame;

@@ -29,9 +29,9 @@ const ChangeView = () => {
         onClick={() => changeViewWorkflow()}
         type="button"
         name="change-view"
-        className="cab-upper-frame-script"
+        className="cab-upper-frame-text"
       >
-        Change View
+        {view === "receiver" ? "Change View" : "view"}
       </button>
       {showViewsBox && (
         <div className="views-box">

@@ -4,7 +4,9 @@ const SelectorButton = ({ name, selected, diameter }) => {
       className={`selector-btn ${
         name === selected && "selected"
       } selector-btn-${diameter}`}
-    ></div>
+    >
+      <div className={`circle ${name === selected && "circle-selected"}`}></div>
+    </div>
   );
 };
 export default SelectorButton;
