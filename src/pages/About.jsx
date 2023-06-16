@@ -1,14 +1,13 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const About = () => {
-  const inTextLink = (page) => {
-    // This will update the state variables so that the proper buttons are lit up when the user navigates away from the page using an in-text link
-    // This function should be in a parent component - or perhaps it's time to go and implement the Store - so that it can be accessed everywhere
-  };
+  // const inTextLink = (page) => {
+  // This will update the state variables so that the proper buttons are lit up when the user navigates away from the page using an in-text link
+  // This function should be in a parent component - or perhaps it's time to go and implement the Store - so that it can be accessed everywhere
+  // };
 
   return (
     <div>
-      <h1 className="page-header">About</h1>
       <p>
         I am a Music History professor at the Federal University of Rio de
         Janeiro since 2015. Though it is called &quot;Adjunct Professor&quot;,
@@ -30,12 +29,13 @@ const About = () => {
         .
       </p>
       <p>
-        The way I see my{" "}
+        {/* The way I see my{" "}
         <Link to="/research" onClick={() => inTextLink("research")}>
           research interests and musicological work
-        </Link>
-        , it makes sense that all my formal training has taken place in History
-        and the Social Sciences and that I have started my teaching career in
+        </Link> */}
+        The way I see my research interests and musicological work, it makes
+        sense that all my formal training has taken place in History and the
+        Social Sciences and that I have started my teaching career in
         Ethnomusicology. The interest in how people think about
         &apos;their&apos; music (which can be the music they make, the music
         they enjoy as listeners etc.) runs across all my research work and, in a

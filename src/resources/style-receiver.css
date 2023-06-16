@@ -401,7 +401,7 @@ button {
   /* font-family: "Crushed"; */
 }
 
-.speaker {
+.content-container {
   margin-top: 0.5em;
   width: 60em;
   min-height: 80vh;
@@ -416,21 +416,6 @@ button {
     rgb(31, 18, 12)
   );
 }
-
-/* .almost-flat .speaker {
-  margin-top: 0.5em;
-  width: 60em;
-  height: 100vh;
-  border: 1px solid;
-  border-image-slice: 1;
-  border-width: 1.5em;
-  border-image-source: linear-gradient(
-    352deg,
-    rgb(42, 21, 9),
-    rgb(54, 29, 13),
-    rgb(31, 18, 12)
-  );
-} */
 
 .grille {
   display: flex;

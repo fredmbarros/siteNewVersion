@@ -1,7 +1,6 @@
 const Teaching = () => {
   return (
     <div>
-      <h1 className="page-header">Teaching</h1>
       <p>
         The disciplines I teach focus on the field of Musicology, including
         History of Music 1 to 4, Brazilian Music 1, 2, and 3, Introduction to

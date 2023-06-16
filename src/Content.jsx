@@ -16,11 +16,11 @@ import Music from "./pages/Music.jsx";
 import Illustration from "./pages/Illustration.jsx";
 import Software from "./pages/Software.jsx";
 
-const Speaker = () => {
+const Content = () => {
   // const { view } = useContext(StoreContext);
 
   return (
-    <div className="speaker">
+    <div className="content-container">
       <div className="grille">
         <Suspense fallback={<p>Loading...</p>}>
           <Routes>
@@ -45,4 +45,4 @@ const Speaker = () => {
   );
 };
 
-export default Speaker;
+export default Content;

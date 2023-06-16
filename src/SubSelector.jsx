@@ -7,30 +7,52 @@ import { StoreContext } from "./store/Store";
 const SubSelector = () => {
   const navigateTo = useNavigate();
 
-  const { setSelectedSubPage, subPageList, selectedSubPage } =
-    useContext(StoreContext);
+  const {
+    view,
+    selectedPage,
+    setSelectedPage,
+    setSelectedSubPage,
+    selectedSubPage,
+    subPageList,
+  } = useContext(StoreContext);
 
-  const subPageSelect = ({ pageName }) => {
-    setSelectedSubPage(pageName);
-    navigateTo(`/${pageName}`);
+  const subPageSelect = (pageName) => {
+    if (pageName === selectedPage) {
+      setSelectedPage(pageName);
+      setSelectedSubPage(null);
+      navigateTo(`/${selectedPage}`);
+    } else {
+      setSelectedSubPage(pageName);
+      navigateTo(`/${pageName}`);
+    }
   };
 
   if (subPageList) {
     return (
       <div className="sub-page-selector-container">
+        {view !== "receiver" && (
+          <button
+            className="sub-page-select"
+            onClick={() => subPageSelect(selectedPage)}
+            type="button"
+            name="Sub-page Selector"
+          ></button>
+        )}
         {subPageList.map((subPage, index) => (
           <button
             className="sub-page-select"
             key={index}
-            onClick={() => subPageSelect(subPage)}
+            onClick={() => subPageSelect(subPage.pageName)}
             type="button"
             name="Sub-page Selector"
           >
-            <SelectorButton
-              name={subPage.pageName}
-              selected={selectedSubPage}
-              diameter="medium"
-            />
+            {view === "receiver" && (
+              <SelectorButton
+                name={subPage.pageName}
+                selected={selectedSubPage}
+                diameter="medium"
+              />
+            )}
             <span className="sub-page-title">{subPage.displayName}</span>
           </button>
         ))}
