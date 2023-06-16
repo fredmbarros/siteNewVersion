@@ -21,7 +21,7 @@ const Content = () => {
 
   return (
     <div className="content-container">
-      <div className="grille">
+      <div className="content-presenter">
         <Suspense fallback={<p>Loading...</p>}>
           <Routes>
             <Route exact path="/" element={<Navigate to="/home" />} />

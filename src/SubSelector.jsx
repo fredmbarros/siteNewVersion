@@ -36,7 +36,9 @@ const SubSelector = () => {
             onClick={() => subPageSelect(selectedPage)}
             type="button"
             name="Sub-page Selector"
-          ></button>
+          >
+            <span className="sub-page-title">&nbsp;</span>
+          </button>
         )}
         {subPageList.map((subPage, index) => (
           <button

@@ -417,7 +417,7 @@ button {
   );
 }
 
-.grille {
+.content-presenter {
   display: flex;
   margin: 0.2em;
   padding: 6em 8em;
@@ -429,7 +429,7 @@ button {
   box-shadow: inset 0em 0em 0.5em rgb(0, 0, 0);
 }
 
-/* .almost-flat .grille {
+/* .almost-flat .content-presenter {
   display: flex;
   justify-content: space-around;
   margin: 0.2em;
