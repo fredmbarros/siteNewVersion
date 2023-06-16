@@ -1,7 +1,6 @@
 const Grad = () => {
   return (
     <div>
-      <h1 className="page-header">Grad</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

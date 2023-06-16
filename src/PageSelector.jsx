@@ -8,7 +8,7 @@ import SelectorButton from "./SelectorButton";
 const PageSelector = () => {
   const navigateTo = useNavigate();
 
-  const { setSelectedPage, setSelectedSubPage, pageList, selectedPage } =
+  const { view, setSelectedPage, setSelectedSubPage, pageList, selectedPage } =
     useContext(StoreContext);
 
   const pageSelect = (page) => {
@@ -18,7 +18,7 @@ const PageSelector = () => {
   };
 
   return (
-    <div className="page-selector-container">
+    <div className={view === "receiver" ? "display-block" : "display-flex"}>
       {pageList.map((page, index) => (
         <button
           className="page-link"

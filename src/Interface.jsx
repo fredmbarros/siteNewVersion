@@ -10,7 +10,7 @@ import SubSelector from "./SubSelector";
 import VuMeter from "./VuMeter";
 
 const Interface = () => {
-  const { setSubPageList, selectedPage } = useContext(StoreContext);
+  const { view, setSubPageList, selectedPage } = useContext(StoreContext);
 
   useEffect(() => {
     setSubPageList(pagesObj[selectedPage]);
@@ -18,15 +18,23 @@ const Interface = () => {
   }, [selectedPage, setSubPageList]);
 
   return (
-    <div className="receiver-cab border-gradient">
+    <div
+      className={`receiver-cab ${view === "receiver" ? "border-gradient" : ""}`}
+    >
       <CabinetFrame />
-      <div className="receiver-main border-gradient">
+      <div
+        className={`interface-main ${
+          view === "receiver" ? "border-gradient" : ""
+        }`}
+      >
         <PageSelector />
-        <div className="receiver-displays">
-          <RadioDisplay />
-          <VuMeter />
-          <VuMeter />
-        </div>
+        {view === "receiver" && (
+          <div className="receiver-displays">
+            <RadioDisplay />
+            <VuMeter />
+            <VuMeter />
+          </div>
+        )}
       </div>
       <SubSelector />
     </div>

@@ -2,7 +2,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
 import Interface from "./Interface";
-import Speaker from "./Speaker";
+import Content from "./Content";
 import { StoreProvider } from "./store/Store";
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
       <BrowserRouter>
         <div className="whole-page">
           <Interface />
-          <Speaker />
+          <Content />
         </div>
       </BrowserRouter>
     </StoreProvider>

@@ -129,7 +129,7 @@ button {
   align-items: baseline;
 } */
 
-.cab-upper-frame-script {
+.cab-upper-frame-text {
   font-family: "Tangerine";
   font-size: 24px;
   /* font-family: "Crushed"; */
@@ -137,7 +137,7 @@ button {
   margin: 0.1em;
 }
 
-.receiver-main {
+.interface-main {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -156,7 +156,7 @@ button {
   margin-right: 0.2em;
 }
 
-.page-selector-container {
+.display-block {
   display: block;
 }
 
@@ -401,7 +401,7 @@ button {
   /* font-family: "Crushed"; */
 }
 
-.speaker {
+.content-container {
   margin-top: 0.5em;
   width: 60em;
   min-height: 80vh;
@@ -417,22 +417,7 @@ button {
   );
 }
 
-/* .almost-flat .speaker {
-  margin-top: 0.5em;
-  width: 60em;
-  height: 100vh;
-  border: 1px solid;
-  border-image-slice: 1;
-  border-width: 1.5em;
-  border-image-source: linear-gradient(
-    352deg,
-    rgb(42, 21, 9),
-    rgb(54, 29, 13),
-    rgb(31, 18, 12)
-  );
-} */
-
-.grille {
+.content-presenter {
   display: flex;
   margin: 0.2em;
   padding: 6em 8em;
@@ -444,7 +429,7 @@ button {
   box-shadow: inset 0em 0em 0.5em rgb(0, 0, 0);
 }
 
-/* .almost-flat .grille {
+/* .almost-flat .content-presenter {
   display: flex;
   justify-content: space-around;
   margin: 0.2em;

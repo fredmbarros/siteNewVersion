@@ -1,3 +1,3 @@
-const availableViews = ["receiver", "almost-flat", "dark-clean", "mobile"];
+const availableViews = ["receiver", "flat", "mobile"];
 
 export default availableViews;
